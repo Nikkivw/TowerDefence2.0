@@ -5,9 +5,16 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     private Transform target;
-    public float range = 15f;
+
+    [Header("Attributes")]
+    public float range = 4f;
+    public float fireRate = 1f;
+    private float fireCountdown = 0f;
 
     public string enemyTag = "Enemy";
+
+    public Transform partToRotate;
+    public float turnSpeed = 10f;
 
     private void Start()
     {
@@ -42,7 +49,27 @@ public class Turret : MonoBehaviour
     void Update()
     {
         if (target == null)
-        return;
+        {
+            return;
+        }
+        // target lockon
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler (0f, rotation.y, 0f);
+
+        if (fireCountdown <= 0f)
+        {
+            Shoot();
+            fireCountdown = 1f/fireRate;
+        }
+
+        fireCountdown -= Time.deltaTime;
+    }
+
+    void Shoot()
+    {
+        Debug.Log("Shoot");
     }
 
     private void OnDrawGizmosSelected()
