@@ -5,16 +5,17 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Transform target;
+    public GameObject ImpactEffect;
 
-    public float speed = 20f;
-
-    public void Seek (Transform _target)
+    public float speed;
+    public void Seek(Transform _Target)
     {
-        target = _target;
+        target = _Target;
     }
+
     void Update()
     {
-        if(target == null)
+        if (target == null)
         {
             Destroy(gameObject);
             return;
@@ -23,15 +24,19 @@ public class Bullet : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
 
-        if(dir.magnitude <= distanceThisFrame)
+        if (dir.magnitude <= distanceThisFrame)
         {
-            hitTarget();
+            HitTarget();
+            return;
         }
-        transform.Translate(dir.normalized* distanceThisFrame);
-    }
 
-    void hitTarget()
+        transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+    }
+    void HitTarget()
     {
-        GameObject effectInt
+        GameObject effectIns = (GameObject)Instantiate(ImpactEffect, transform.position, transform.rotation);
+        Destroy(effectIns, 1f);
+        Destroy(gameObject);
+        Destroy(target.gameObject);
     }
 }
