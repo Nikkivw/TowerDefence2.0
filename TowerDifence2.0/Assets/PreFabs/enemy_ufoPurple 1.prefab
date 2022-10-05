@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4808888013342794452}
   - component: {fileID: 7302707065837753886}
   - component: {fileID: 3066092554963049822}
+  - component: {fileID: -9138283032974735827}
   m_Layer: 0
   m_Name: enemy_ufoPurple 1
   m_TagString: Enemy
@@ -99,4 +100,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd910b8d8c0b94043b748e6376c3c7e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 1
+--- !u!135 &-9138283032974735827
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9104186156367558603}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.49999994
+  m_Center: {x: 0, y: 0.18559997, z: 0}

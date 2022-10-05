@@ -34,8 +34,8 @@ public class Bullet : MonoBehaviour
     }
     void HitTarget()
     {
-        GameObject effectIns = (GameObject)Instantiate(ImpactEffect, transform.position, transform.rotation);
-        Destroy(effectIns, 1f);
+        //GameObject effectIns = (GameObject)Instantiate(ImpactEffect, transform.position, transform.rotation);
+        //Destroy(effectIns, 1f);
         Destroy(gameObject);
         Destroy(target.gameObject);
     }

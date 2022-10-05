@@ -97,4 +97,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImpactEffect: {fileID: 0}
-  speed: 5
+  speed: 70
