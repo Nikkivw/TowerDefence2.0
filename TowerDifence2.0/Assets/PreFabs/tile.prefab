@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4447290245180276206}
   - component: {fileID: 727376965443039819}
   - component: {fileID: 3313767753123907201}
+  - component: {fileID: 2483855087977526266}
   m_Layer: 0
   m_Name: tile
   m_TagString: Untagged
@@ -84,3 +85,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2483855087977526266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3962079459841402708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813b4df040fe2e9488495fa4140faaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverColor: {r: 0.036904525, g: 0.2735849, b: 0.03200426, a: 0.8509804}
+  notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
+  turret: {fileID: 0}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2736,7 +2736,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 124319397889434663, guid: 2727d6279a0716446aa2ec3156d1caa7, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 124319397889434663, guid: 2727d6279a0716446aa2ec3156d1caa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4271,7 +4271,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &620643010
 PrefabInstance:
@@ -6401,7 +6401,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 65, y: -90, z: 0}
 --- !u!1001 &869411181
 PrefabInstance:
@@ -9394,6 +9394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1251944196}
   - component: {fileID: 1251944195}
+  - component: {fileID: 1251944197}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -9429,8 +9430,21 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1251944197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251944194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a68493c5442f80548835ada6b0318a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standardTurretPrefab: {fileID: 9108919831636996684, guid: e79eff340f82f86468f00e92498d9e69, type: 3}
 --- !u!1001 &1274377297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12588,7 +12602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 876111103143769902, guid: 3ccd0ec265f6c754f91a436119724d04, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 876111103143769902, guid: 3ccd0ec265f6c754f91a436119724d04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17156,5 +17170,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2813780540223961462, guid: dee86f6f89ddd944093c17712cb4b6e8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dee86f6f89ddd944093c17712cb4b6e8, type: 3}
