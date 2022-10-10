@@ -1,6 +1,6 @@
 # TowerDefence
  TowerDefence2.0
- ``mermaid
+ ```mermaid
  graph TD
     A[Start Game] -->|10 Sec Timer| B(Spawn Wave)
     B --> C{kill enemy}
