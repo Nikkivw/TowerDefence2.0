@@ -1,13 +1,13 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour
-{
-
+{ 
     public Color hoverColor;
 
-    [HideInInspector]
     public GameObject turret;
+    public GameObject TurretToBuild;
     
     private Renderer rend;
     private Color startColor;
@@ -15,30 +15,28 @@ public class Node : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
-        startColor = rend.material.color;
+        startColor = rend.materials[1].color;
     }
 
     void OnMouseDown()
     {
- 
-        if (turret != null)
+        if (turret = null)
         {
-            Debug.Log("Cant build here");
-            return;
+            Instantiate(turret);
         }
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
-        turret = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
+        GameObject turretToBuild = TurretToBuild;
+        turret = (GameObject)Instantiate(turretToBuild);
+        turret.transform.position = new Vector3(transform.position.x, 0.25f, transform.position.z);
     }
     
     void OnMouseEnter()
     {
-        rend.material.color = hoverColor;
-
+        rend.materials[1].color = hoverColor;
+        Debug.Log("color change");
     }
 
     void OnMouseExit()
     {
-        rend.material.color = startColor;
+        rend.materials[1].color = startColor;
     }
-
 }

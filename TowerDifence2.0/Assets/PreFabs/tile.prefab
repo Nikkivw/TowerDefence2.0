@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 727376965443039819}
   - component: {fileID: 3313767753123907201}
   - component: {fileID: 2483855087977526266}
+  - component: {fileID: -5672659977019808274}
   m_Layer: 0
   m_Name: tile
   m_TagString: Untagged
@@ -26,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3962079459841402708}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 1.4472045, y: -0.03229402, z: 8.399334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!33 &727376965443039819
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -97,6 +98,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813b4df040fe2e9488495fa4140faaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.036904525, g: 0.2735849, b: 0.03200426, a: 0.8509804}
-  notEnoughMoneyColor: {r: 0, g: 0, b: 0, a: 0}
-  turret: {fileID: 0}
+  hoverColor: {r: 0.20135279, g: 0.5283019, b: 0.40649733, a: 1}
+  turret: {fileID: 9108919831636996684, guid: e79eff340f82f86468f00e92498d9e69, type: 3}
+  TurretToBuild: {fileID: 9108919831636996684, guid: e79eff340f82f86468f00e92498d9e69, type: 3}
+--- !u!64 &-5672659977019808274
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3962079459841402708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4855243574250553854, guid: 4f2975485ef19c64fb69d1189b50637e, type: 3}
