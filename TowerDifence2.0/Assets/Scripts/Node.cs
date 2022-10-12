@@ -32,7 +32,6 @@ public class Node : MonoBehaviour
     void OnMouseEnter()
     {
         rend.materials[1].color = hoverColor;
-        Debug.Log("color change");
     }
 
     void OnMouseExit()
