@@ -99,8 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.20135279, g: 0.5283019, b: 0.40649733, a: 1}
-  turret: {fileID: 9108919831636996684, guid: e79eff340f82f86468f00e92498d9e69, type: 3}
-  TurretToBuild: {fileID: 9108919831636996684, guid: e79eff340f82f86468f00e92498d9e69, type: 3}
+  posOffset: {x: 0, y: 0.25, z: 0}
 --- !u!64 &-5672659977019808274
 MeshCollider:
   m_ObjectHideFlags: 0

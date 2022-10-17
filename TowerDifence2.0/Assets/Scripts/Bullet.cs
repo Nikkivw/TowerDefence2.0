@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bullet : MonoBehaviour
 {
     private Transform target;
-    public GameObject ImpactEffect;
 
     public float speed;
+
+    public int damage;
+
     public void Seek(Transform _Target)
     {
         target = _Target;
@@ -34,9 +37,12 @@ public class Bullet : MonoBehaviour
     }
     void HitTarget()
     {
-        //GameObject effectIns = (GameObject)Instantiate(ImpactEffect, transform.position, transform.rotation);
-        //Destroy(effectIns, 1f);
+        target.GetComponent<Enemy>().health -= damage;
+        target.GetComponent<Enemy>().healthBar.fillAmount = target.GetComponent<Enemy>().health / target.GetComponent<Enemy>().startHealth;
+        if (target.GetComponent<Enemy>().health <= 0)
+        {
+            Destroy(target.gameObject);
+        }
         Destroy(gameObject);
-        Destroy(target.gameObject);
     }
 }

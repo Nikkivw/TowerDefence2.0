@@ -1,15 +1,22 @@
-
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Enemy : MonoBehaviour
 {
     public float speed = 10f;
 
+    public float health;
+    public float startHealth = 100;
+
     private Transform target;
     private int wavepointIndex = 0;
 
+    public Image healthBar;
+
     void Start()
     {
+        health = startHealth;
         target = Waypoints.wpoints[0];
     }
 
