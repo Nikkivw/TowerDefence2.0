@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
-    void HitTarget()
+    void HitTarget()// Enemy health
     {
         target.GetComponent<Enemy>().health -= damage;
         target.GetComponent<Enemy>().healthBar.fillAmount = target.GetComponent<Enemy>().health / target.GetComponent<Enemy>().startHealth;
